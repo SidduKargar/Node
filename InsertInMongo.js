@@ -30,7 +30,7 @@ mongoose.connect('mongodb+srv://siddukargar:273301@cluster0.ontdz5y.mongodb.net/
             }
         }
 
-        // Usage example
+        // Invoke Insert Function
         insertUser('sanjay', 'sanjay@gmail.com', 'password123');
     })
     .catch((error) => {

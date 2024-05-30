@@ -23,7 +23,7 @@ async function connectToDB() {
 async function getUserData() {
     try {
         await connectToDB();
-        const users = await User.find({username:"Siddu"});
+        const users = await User.find({});
         for await (const doc of users) {
             console.log(doc.toObject());
           }
