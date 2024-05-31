@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+5
 // Connection URI
 const uri = 'mongodb+srv://siddukargar:273301@cluster0.ontdz5y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test';
 
@@ -23,10 +23,14 @@ async function connectToDB() {
 async function getUserData() {
     try {
         await connectToDB();
-        const users = await User.find({});
-        for await (const doc of users) {
-            console.log(doc.toObject());
-          }
+
+        const users = await User.findById('665a09059f93e6f08583a216');
+        console.log(users.toObject())
+
+        // for await (const doc of users) {
+        //     console.log(doc.toObject());
+        //   }
+        
     } catch (error) {
         console.error(error);
     } finally {
